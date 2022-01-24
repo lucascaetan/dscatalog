@@ -38,7 +38,6 @@ public class CategoryResource {
 		
 		PageRequest pageRequest = PageRequest.of(page, linesPerPage, Direction.valueOf(direction), orderBy);
 		
-		
 		Page<CategoryDTO> list = service.findAllPaged(pageRequest);
 		
 		return ResponseEntity.ok().body(list);
