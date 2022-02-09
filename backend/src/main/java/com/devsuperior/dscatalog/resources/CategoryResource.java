@@ -28,9 +28,7 @@ public class CategoryResource {
 	
 	@GetMapping
 	public ResponseEntity<Page<CategoryDTO>> findAll(Pageable pageable) {
-		
 		Page<CategoryDTO> list = service.findAllPaged(pageable);
-		
 		return ResponseEntity.ok().body(list);
 	}
 	
